@@ -44,7 +44,6 @@ def edit_by_id(teacher_id : int, updated : Teacher = Depends(validate_experience
         
         session.add(teacher)
         session.commit()
-        session.refresh(teacher)
 
         return {"message" : "Данные обновлены"}
 
